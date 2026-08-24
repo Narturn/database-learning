@@ -111,20 +111,24 @@ Không cần code.
 
 Một game có:
 
+```text
 player_id
 total_damage
 player_name
 account_created
 last_login
 is_online
+```
 
 Tự chọn data type cho từng
 
 ### Solving exercises 3
 
+```text
 player_id       - INT
 total_damage    - INT (Số Dam nên là số nguyên để dễ tính toán)
 player_name     - VARCHAR(30)
 account_created - DATETIME2
 last_login      - DATETIME2 
 is_online       - BIT (Có / Không)
+```
