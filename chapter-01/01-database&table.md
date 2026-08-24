@@ -1,4 +1,4 @@
-# Chapter 1 — Database & Table
+# Chapter 1.1 — Database & Table
 
 ## 📖 Concepts
 
@@ -184,7 +184,7 @@ GO
 
 ---
 
-## 🧪 Examples
+## 🧪 Mission
 
 ### Tạo Database
 
@@ -226,15 +226,6 @@ SELECT name
 FROM sys.tables;
 GO
 ```
-
----
-
-## ❓ Questions
-
-* `GO` có phải là SQL không?
-* Database được SQL Server lưu ở đâu trên máy?
-* Table thực sự được lưu như thế nào?
-* `VARCHAR(50)` khác `VARCHAR` như thế nào?
 
 ---
 

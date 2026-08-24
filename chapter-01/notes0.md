@@ -60,8 +60,8 @@ Kiến thức
 ## 💻 Syntax
 Cú pháp quan trọng
 
-## 🧪 Examples
-Ví dụ
+## 🧪 Mission
+Nhiệm vụ
 
 ## ❓ Questions
 Những thứ chưa hiểu
