@@ -1,4 +1,4 @@
-# Chapter 1.2 — NULL
+# Chapter 1.3 — NULL
 
 ## 📖 Concepts
 

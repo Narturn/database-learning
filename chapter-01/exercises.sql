@@ -91,3 +91,57 @@ GO
 -- SELECT * FROM null_test 
 -- WHERE age IS NOT NULL;
 -- GO
+
+-- =============================================
+-- Chapter 1.4
+-- =============================================4
+IF OBJECT_ID('dbo.constrained_players', 'U') IS NOT NULL
+    DROP TABLE dbo.constrained_players;
+GO
+
+CREATE TABLE constrained_players (
+    id INT IDENTITY(1,1) PRIMARY KEY,       -- PK, KHÔNG THỂ NULL
+    username VARCHAR(30) NOT NULL UNIQUE,   -- Tối đa 30, NOT NULL, KHÔNG TRÙNG
+    level INT DEFAULT 1 CHECK (level >= 1), -- Default = 1, Ràng buộc >= 1
+    gold INT DEFAULT 0 CHECK (gold >= 0),   -- Default = 0, Ràng buộc >= 0
+    email VARCHAR(255) UNIQUE               -- Có thể NULL, KHÔNG TRÙNG
+);
+GO
+
+-- A. Một player hợp lệ (Thành công ✅)
+INSERT INTO constrained_players (username, level, gold, email)
+VALUES ('giao2803', 10, 500, 'giao@gmail.com');
+GO
+
+-- B. Hai player có cùng username (Thất bại ❌ - Lỗi Vi phạm UNIQUE Constraint)
+INSERT INTO constrained_players (username, level, gold, email)
+VALUES ('giao2803', 1, 0, 'giao_other@gmail.com');
+GO
+
+-- C. Level = 0 (Thất bại ❌ - Lỗi Vi phạm CHECK Constraint)
+INSERT INTO constrained_players (username, level, gold, email)
+VALUES ('player_c', 0, 100, 'c@gmail.com');
+GO
+
+-- D. Gold = -100 (Thất bại ❌ - Lỗi Vi phạm CHECK Constraint)
+INSERT INTO constrained_players (username, level, gold, email)
+VALUES ('player_d', 5, -100, 'd@gmail.com');
+GO
+
+-- E. Không truyền level và gold (Thành công ✅ - Tự động nhận DEFAULT level=1, gold=0)
+INSERT INTO constrained_players (username, email)
+VALUES ('player_e', 'e@gmail.com');
+GO
+
+-- F. Hai player có cùng email (Thất bại ❌ - Lỗi Vi phạm UNIQUE Constraint)
+INSERT INTO constrained_players (username, email)
+VALUES ('player_f', 'giao@gmail.com'); -- Trùng email của giao2803 ở câu A
+GO
+
+-- G. id = NULL (Thất bại ❌ vì PRIMARY KEY không cho phép NULL.)
+INSERT INTO constrained_players (id, username, email)
+VALUES (NULL, 'player_g', 'g@gmail.com');
+GO
+
+SELECT * FROM constrained_players;
+GO
