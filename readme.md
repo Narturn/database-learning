@@ -15,8 +15,8 @@ Lộ trình học Database với SQL Server.
 - ✅[1.1 — Database & Table](./chapter-01/01-database-and-table.md)
 - ✅[1.2 — Data Types](./chapter-01/02-data-types.md)
 - ✅[1.3 — NULL](./chapter-01/03-null.md)
-- [1.4 — Constraints](./chapter-01/04-constraints.md)
-- [1.5 — Primary Key](./chapter-01/05-primary-key.md)
+- ✅[1.4 — Constraints](./chapter-01/04-constraints.md)
+- ✅[1.5 — Primary Key and Identity](./chapter-01/05-primary-key-and-identity.md)
 - [1.6 — Identity & Auto Increment](./chapter-01/06-identity.md)
 
 ---

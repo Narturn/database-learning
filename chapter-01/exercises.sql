@@ -94,7 +94,7 @@ GO
 
 -- =============================================
 -- Chapter 1.4
--- =============================================4
+-- =============================================
 IF OBJECT_ID('dbo.constrained_players', 'U') IS NOT NULL
     DROP TABLE dbo.constrained_players;
 GO
@@ -143,5 +143,68 @@ INSERT INTO constrained_players (id, username, email)
 VALUES (NULL, 'player_g', 'g@gmail.com');
 GO
 
-SELECT * FROM constrained_players;
+-- SELECT * FROM constrained_players;
+-- GO
+
+-- =============================================
+-- Chapter 1.5
+-- =============================================
+
+-- Xóa bảng cũ nếu đã tồn tại
+IF OBJECT_ID('dbo.player_items', 'U') IS NOT NULL
+    DROP TABLE dbo.player_items;
 GO
+
+-- Exercise 1 — Tạo Player 
+
+CREATE TABLE players_v2 (
+    id INT IDENTITY(1000, 1) PRIMARY KEY,
+    username VARCHAR(30) NOT NULL UNIQUE,
+    email VARCHAR(255) UNIQUE,
+    level INT DEFAULT 1 CHECK (level >= 1)
+);
+
+-- Exercise 2 — UNIQUE vs PRIMARY KEY
+
+INSERT INTO players_v2 (username, email, level)
+VALUES ('player1', '1@gmail.com', 3);
+GO
+
+-- username trùng
+INSERT INTO players_v2 (username, email, level)
+VALUES ('player1', 'a@gmail.com', 4);
+GO
+
+-- email trùng
+INSERT INTO players_v2 (username, email, level)
+VALUES ('player2', '1@gmail.com', 5);
+GO
+
+-- id trùng
+INSERT INTO players_v2 (id, username, email, level)
+VALUES (1000, 'player3', '3@gmail.com', 3);
+GO
+
+-- Exercise 5 — Composite Primary Key
+
+CREATE TABLE player_items(
+    player_id INT NOT NULL,
+    item_id INT NOT NULL,
+    quantity INT,
+    PRIMARY KEY (player_id, item_id)
+);
+GO
+
+-- 2. Insert các bản ghi hợp lệ
+INSERT INTO player_items (player_id, item_id, quantity) VALUES (1, 100, 5);
+INSERT INTO player_items (player_id, item_id, quantity) VALUES (1, 101, 2);
+INSERT INTO player_items (player_id, item_id, quantity) VALUES (2, 100, 10);
+GO
+
+-- 3. Thêm trùng bộ (player_id = 1, item_id = 100)
+INSERT INTO player_items (player_id, item_id, quantity) VALUES (1, 100, 20);
+GO
+
+-- SELECT * FROM players_v2;
+-- SELECT * FROM player_items;
+-- GO
