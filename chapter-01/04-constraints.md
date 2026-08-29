@@ -192,17 +192,6 @@ id | player_id
 
 Character này thuộc player nào.
 
-## Tổng hợp
-
-| Constraint    | Chức năng                             |
-| ------------- | ------------------------------------- |
-| `NOT NULL`    | Không cho phép thiếu giá trị          |
-| `UNIQUE`      | Không cho phép trùng giá trị          |
-| `CHECK`       | Ép dữ liệu thỏa điều kiện             |
-| `DEFAULT`     | Tự cung cấp giá trị nếu không truyền  |
-| `PRIMARY KEY` | Xác định duy nhất một row             |
-| `FOREIGN KEY` | Liên kết và bảo vệ quan hệ giữa table |
-
 ## 🧪 Exercise
 
 ### Exercise 1 — Thiết kế Player
@@ -237,3 +226,14 @@ password_hash   -> NOT NULL
 age             -> Không cần constraints
 created_at      -> Không cần constraints
 ```
+
+## Tổng hợp
+
+| Constraint    | Chức năng                             |
+| ------------- | ------------------------------------- |
+| `NOT NULL`    | Không cho phép thiếu giá trị          |
+| `UNIQUE`      | Không cho phép trùng giá trị          |
+| `CHECK`       | Ép dữ liệu thỏa điều kiện             |
+| `DEFAULT`     | Tự cung cấp giá trị nếu không truyền  |
+| `PRIMARY KEY` | Xác định duy nhất một row             |
+| `FOREIGN KEY` | Liên kết và bảo vệ quan hệ giữa table |

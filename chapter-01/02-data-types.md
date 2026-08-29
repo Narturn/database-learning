@@ -17,21 +17,6 @@ level    → số nguyên
 gold     → số nguyên
 ```
 
-### Các nhóm Data Types phổ biến:
-
-```text
-| Type        | Dùng cho               | Ví dụ              |
-| ----------- | ---------------------- | ------------------ |
-| `INT`       | Số nguyên              | `100`              |
-| `BIGINT`    | Số nguyên rất lớn      | `900000000000`     |
-| `DECIMAL`   | Số thập phân chính xác | `99.95`            |
-| `VARCHAR`   | Chuỗi độ dài thay đổi  | `"Alice"`          |
-| `CHAR`      | Chuỗi độ dài cố định   | `"VN"`             |
-| `DATE`      | Ngày                   | `2026-08-21`       |
-| `DATETIME2` | Ngày + giờ             | `2026-08-21 14:30` |
-| `BIT`       | Đúng/sai               | `0`, `1`           |
-```
-
 ### ⚠️ Nguyên tắc quan trọng:
 
 Đừng chọn data type dựa trên "có vẻ chứa được".
@@ -79,7 +64,6 @@ player_profile
 
 với các thông tin:
 
-```text
 | Column       | Yêu cầu                          |
 | ------------ | -------------------------------- |
 | `id`         | số nguyên                        |
@@ -89,7 +73,6 @@ với các thông tin:
 | `birth_date` | ngày sinh                        |
 | `created_at` | thời điểm tạo                    |
 | `is_banned`  | có/không                         |
-```
 
 Yêu cầu
 
@@ -132,3 +115,16 @@ account_created - DATETIME2
 last_login      - DATETIME2 
 is_online       - BIT (Có / Không)
 ```
+
+## Các nhóm Data Types phổ biến:
+
+| Type        | Dùng cho               | Ví dụ              |
+| ----------- | ---------------------- | ------------------ |
+| `INT`       | Số nguyên              | `100`              |
+| `BIGINT`    | Số nguyên rất lớn      | `900000000000`     |
+| `DECIMAL`   | Số thập phân chính xác | `99.95`            |
+| `VARCHAR`   | Chuỗi độ dài thay đổi  | `"Alice"`          |
+| `CHAR`      | Chuỗi độ dài cố định   | `"VN"`             |
+| `DATE`      | Ngày                   | `2026-08-21`       |
+| `DATETIME2` | Ngày + giờ             | `2026-08-21 14:30` |
+| `BIT`       | Đúng/sai               | `0`, `1`           |

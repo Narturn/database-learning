@@ -150,11 +150,6 @@ GO
 -- Chapter 1.5
 -- =============================================
 
--- Xóa bảng cũ nếu đã tồn tại
-IF OBJECT_ID('dbo.player_items', 'U') IS NOT NULL
-    DROP TABLE dbo.player_items;
-GO
-
 -- Exercise 1 — Tạo Player 
 
 CREATE TABLE players_v2 (
@@ -208,3 +203,105 @@ GO
 -- SELECT * FROM players_v2;
 -- SELECT * FROM player_items;
 -- GO
+
+-- =============================================
+-- Chapter 1.6
+-- =============================================
+-- ex 1-2
+DROP TABLE IF EXISTS schema_lab;
+GO
+
+CREATE TABLE schema_lab(
+    id INT IDENTITY(1, 1) PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    level INT
+);
+GO
+
+-- Insert 3 player
+INSERT INTO schema_lab (username, level) VALUES 
+('yasuo', 10),
+('yone', 5),
+('Bliat', 8);
+GO
+
+ALTER TABLE schema_lab
+ADD email VARCHAR(255);
+GO
+
+-- Ex 3-4
+-- 1. Thêm Constraint UNIQUE với tên UQ_schema_lab_username
+ALTER TABLE schema_lab
+ADD CONSTRAINT UQ_schema_lab_username UNIQUE (username);
+GO
+
+-- 2. Thử phá DB: Thêm một username trùng với người đã có ('yasuo')
+INSERT INTO schema_lab (username, level) 
+VALUES ('yasuo', 99);
+GO
+
+-- Thay đổi kích thước cột username lên 50 ký tự
+ALTER TABLE schema_lab
+ALTER COLUMN username VARCHAR(50) NOT NULL;
+GO
+
+-- Kiểm tra lại cấu trúc (schema) của bảng để xác nhận
+SELECT 
+    column_name, 
+    data_type, 
+    character_maximum_length, 
+    is_nullable
+FROM information_schema.columns
+WHERE table_name = 'schema_lab';
+GO
+
+-- ex 5-6-7
+-- Thêm column country (Ban đầu cho phép NULL)
+ALTER TABLE schema_lab
+ADD country VARCHAR(50) NULL;
+GO
+
+-- Điền country cho cả 3 player cũ
+UPDATE schema_lab SET country = 'Vietnam' WHERE username = 'yasuo';
+UPDATE schema_lab SET country = 'Japan'   WHERE username = 'yone';
+UPDATE schema_lab SET country = 'USA'     WHERE username = 'Bliat';
+GO
+
+-- Kiểm tra xác nhận không còn NULL
+SELECT * FROM schema_lab WHERE country IS NULL;
+GO
+
+-- Đổi column country thành NOT NULL
+ALTER TABLE schema_lab
+ALTER COLUMN country VARCHAR(50) NOT NULL;
+GO
+
+-- 1. Xóa UNIQUE constraint của username
+ALTER TABLE schema_lab
+DROP CONSTRAINT UQ_schema_lab_username;
+GO
+
+-- 2. Thử Insert username trùng ('yasuo')
+INSERT INTO schema_lab (username, level, country) 
+VALUES ('yasuo', 99, 'Vietnam');
+GO
+
+-- 3. Kiểm tra lại bảng
+SELECT * FROM schema_lab;
+GO
+
+-- 1. Thêm cột tạm
+ALTER TABLE schema_lab
+ADD temporary_data VARCHAR(100);
+GO
+
+-- 2. Xóa cột tạm bằng ALTER TABLE ... DROP COLUMN
+ALTER TABLE schema_lab
+DROP COLUMN temporary_data;
+GO
+
+-- 3. Kiểm tra lại bảng (Cột temporary_data đã biến mất)
+SELECT * FROM schema_lab;
+GO
+
+-- DJTME t làm dơ vcl :))
