@@ -24,7 +24,7 @@ Lộ trình học Database với SQL Server.
 ## Chapter 2 — CRUD
 
 - ✅[2.1 — INSERT](./chapter-02/01-insert.md)
-- [2.2 — SELECT](./chapter-02/02-select.md)
+- ✅[2.2 — SELECT](./chapter-02/02-select.md)
 - [2.3 — WHERE](./chapter-02/03-where.md)
 - [2.4 — UPDATE](./chapter-02/04-update.md)
 - [2.5 — DELETE](./chapter-02/05-delete.md)
