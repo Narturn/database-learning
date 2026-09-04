@@ -16,7 +16,7 @@
 - [x] [2.3 — WHERE](chapter-02/03-where.md)
 - [x] [2.4 — ORDER BY](chapter-02/04-order-by.md)
 - [x] [2.5 — TOP](chapter-02/05-top.md)
-- [ ] [2.6 — Aggregate Functions](chapter-02/06-aggregate-functions.md)
+- [x] [2.6 — Aggregate Functions](chapter-02/06-aggregate-functions.md)
 - [ ] [2.7 — GROUP BY](chapter-02/07-group-by.md)
 - [ ] [2.8 — HAVING](chapter-02/08-having.md)
 
