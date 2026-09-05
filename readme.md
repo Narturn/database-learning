@@ -20,11 +20,11 @@
 - [x] [2.7 — GROUP BY](chapter-02/07-group-by.md)
 - [x] [2.8 — HAVING](chapter-02/08-having.md)
 - [x] [2.9 — UPDATE & DELETE](chapter-02/09-update-and-delete.md)
-- [ ] [2.10 — T-SQL Variables](chapter-02/10-t-sql-variables.md)
+- [x] [2.10 — T-SQL Variables](chapter-02/10-t-sql-variables.md)
 
 ## Chapter 3 — Relationships & JOIN
 
-- [ ] [3.1 — Foreign Key & Relationships](chapter-03/01-foreign-key-relationships.md)
+- [x] [3.1 — Foreign Key & Relationships](chapter-03/01-foreign-key-relationships.md)
 - [ ] [3.2 — INNER JOIN](chapter-03/02-inner-join.md)
 - [ ] [3.3 — LEFT JOIN & RIGHT JOIN](chapter-03/03-left-right-join.md)
 - [ ] [3.4 — FULL OUTER JOIN](chapter-03/04-full-outer-join.md)
