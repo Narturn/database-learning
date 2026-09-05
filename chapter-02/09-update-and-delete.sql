@@ -40,5 +40,20 @@ GO
 
 -- Ex 4:
 DELETE FROM shop_players
-WHERE username = 'player_x';
+WHERE gold = 0;
 GO
+
+SELECT * FROM shop_players;
+GO
+
+/* 
+id          username                       level       gold       
+----------- ------------------------------ ----------- -----------
+          1 yasuo                                   10        1500
+          2 Bliat                                    2           0
+          3 d                                        1           5
+         10 yone                                     5         200
+         11 faker                                   20        1500
+         15 Ex5                                     10        1000
+         17 ex_order                                10        6500
+*/
