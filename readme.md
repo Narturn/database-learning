@@ -19,9 +19,8 @@
 - [x] [2.6 — Aggregate Functions](chapter-02/06-aggregate-functions.md)
 - [x] [2.7 — GROUP BY](chapter-02/07-group-by.md)
 - [x] [2.8 — HAVING](chapter-02/08-having.md)
-- [ ] [2.9 — UPDATE](chapter-02/09-update.md)
-- [ ] [2.10 — DELETE](chapter-02/10-delete.md)
-- [ ] [2.11 — T-SQL Variables](chapter-02/11-t-sql-variables.md)
+- [x] [2.9 — UPDATE & DELETE](chapter-02/09-update-and-delete.md)
+- [ ] [2.10 — T-SQL Variables](chapter-02/10-t-sql-variables.md)
 
 ## Chapter 3 — Relationships & JOIN
 
