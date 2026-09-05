@@ -31,7 +31,7 @@ GO
 SELECT
     COUNT(*) AS player_count,
     SUM(gold) AS total_gold,
-    CAST(AVG(gold AS DECIMAL(10, 2))) AS average_gold,
+    AVG(CAST(gold AS DECIMAL(10, 2))) AS average_gold,
     MIN(gold) AS min_gold,
     MAX(gold) AS max_gold
 FROM shop_players;
