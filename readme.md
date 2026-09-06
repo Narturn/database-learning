@@ -34,9 +34,8 @@
 ## Chapter 4 — Database Design
 
 - [x] [4.1 — One-to-One, One-to-Many & Many-to-Many](chapter-04/01-relationships.md)
-- [ ] [4.2 — Normalization](chapter-04/02-normalization.md)
-- [ ] [4.3 — 1NF, 2NF & 3NF](chapter-04/03-normal-forms.md)
-- [ ] [4.4 — ERD](chapter-04/04-erd.md)
+- [x] [4.2 — Normalization](chapter-04/02-normalization.md)
+- [ ] [4.3 — ERD](chapter-04/03-erd.md)
 
 ## Chapter 5 — Transactions
 
