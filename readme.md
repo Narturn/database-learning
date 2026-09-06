@@ -25,9 +25,9 @@
 ## Chapter 3 — Relationships & JOIN
 
 - [x] [3.1 — Foreign Key & Relationships](chapter-03/01-foreign-key-relationships.md)
-- [ ] [3.2 — INNER JOIN](chapter-03/02-inner-join.md)
-- [ ] [3.3 — LEFT JOIN & RIGHT JOIN](chapter-03/03-left-right-join.md)
-- [ ] [3.4 — FULL OUTER JOIN](chapter-03/04-full-outer-join.md)
+- [x] [3.2 — INNER JOIN](chapter-03/02-inner-join.md)
+- [x] [3.3 — LEFT JOIN & RIGHT JOIN](chapter-03/03-left-right-join.md)
+- [x] [3.4 — FULL OUTER JOIN](chapter-03/04-full-outer-join.md)
 - [ ] [3.5 — CROSS JOIN](chapter-03/05-cross-join.md)
 - [ ] [3.6 — SELF JOIN](chapter-03/06-self-join.md)
 
