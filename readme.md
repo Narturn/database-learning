@@ -28,12 +28,12 @@
 - [x] [3.2 — INNER JOIN](chapter-03/02-inner-join.md)
 - [x] [3.3 — LEFT JOIN & RIGHT JOIN](chapter-03/03-left-right-join.md)
 - [x] [3.4 — FULL OUTER JOIN](chapter-03/04-full-outer-join.md)
-- [ ] [3.5 — CROSS JOIN](chapter-03/05-cross-join.md)
-- [ ] [3.6 — SELF JOIN](chapter-03/06-self-join.md)
+- [x] [3.5 — CROSS JOIN](chapter-03/05-cross-join.md)
+- [x] [3.6 — SELF JOIN](chapter-03/06-self-join.md)
 
 ## Chapter 4 — Database Design
 
-- [ ] [4.1 — One-to-One, One-to-Many & Many-to-Many](chapter-04/01-relationships.md)
+- [x] [4.1 — One-to-One, One-to-Many & Many-to-Many](chapter-04/01-relationships.md)
 - [ ] [4.2 — Normalization](chapter-04/02-normalization.md)
 - [ ] [4.3 — 1NF, 2NF & 3NF](chapter-04/03-normal-forms.md)
 - [ ] [4.4 — ERD](chapter-04/04-erd.md)
